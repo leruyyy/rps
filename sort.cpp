@@ -1,0 +1,18 @@
+
+#include "sort.h"
+
+
+// Гномья сортировка
+void gnome_sort(std::vector<int>& arr) {
+    for (size_t i = 1; i < arr.size();) {
+        if (i != 0 && arr[i] < arr[i - 1]) {
+            int tmp = arr[i];
+            arr[i] = arr[i - 1];
+            arr[i - 1] = tmp;
+            i--;
+        }
+        else {
+            i++;
+        }
+    }
+}
